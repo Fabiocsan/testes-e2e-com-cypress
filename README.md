@@ -22,13 +22,19 @@ Antes de executar os testes, algumas variáveis de ambiente precisam ser configu
 
 Faça uma cópia do arquivo ['cypress.env.example.json'] (./cypress.env.example.json) como 'cypress.env.json', e defina os valores apropriados para todas as variáveis.
 
-**Nota:** O arquivo `cypress.env.json` não é rastreado pelo git, pois está listado no arquivo `.gitignore'.
+**Nota:** O arquivo `cypress.env.json` não é rastreado pelo git, pois está listado no arquivo `.gitignore' por ser dados sensiveis, afim de validar os testes, segue os valores utilizados:
+
+"USER_EMAIL": "e6d0fc1e-bf9a-4194-b7c8-54e3dcf8445f@5m91d6ru.mailosaur.net",
+"USER_PASSWORD": "s3Cre7P@sSw0rd",
+"MAILOSAUR_SERVER_ID": "5m91d6ru",
+"MAILOSAUR_API_KEY": "KGRdAhrMP70lDk4S6QyXHkMhOdqrpCrp"
+
 
 ## Executando os testes
 
 Neste projeto, você pode executar testes em modos interativos e sem cabeça, tanto na janela de visualização do desktop quanto da tela do tablet.
 
-### modo sem cabeça
+### modo Headless
 
 Execute o teste npm (ou `npm t`) para executar todos os testes no modo sem cabeça usando uma janela de visualização de desktop.
 
