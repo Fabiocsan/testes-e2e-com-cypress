@@ -5,82 +5,82 @@
 declare namespace Cypress {
     interface Chainable {
       /**
-       * Logs into the Scratch App via the graphical user interface (GUI).
+       * Faz login no aplicativo Scratch através da interface gráfica do usuário (GUI).
        *
-       * @param username string - The email of the user you want to log in with
-       * @param password string - The password of the user you want to log in with
+       * @param username string - O email do usuário com o qual você deseja fazer login
+       * @param password string - A senha do usuário com o qual você deseja fazer login
        *
-       * @example cy.guiLogin() // Logs into the app using the default email and password (defined as envs)
-       * @example cy.guiLogin('user@email.com', 'S3cRe7P@ssW0rd') // Logs into the app using the provided credentials
+       * @example cy.guiLogin() // Faz logon no aplicativo usando o e-mail e a senha padrão (definidos como envs)
+       * @example cy.guiLogin('user@email.com', 'S3cRe7P@ssW0rd') // Faz logon no aplicativo usando as credenciais fornecidas
        */
       guiLogin(username?: string, password?: string): void | Cypress.Chainable<null>
   
       /**
-       * Logs into the Scratch App via GUI **once**, and creates a session in this process
-       * for further restoring. This way, no time is wasted when authentication is only a
-       * test's pre-condition instead of its primary focus.
+       * Faz logon no aplicativo Scratch via GUI **once**, e cria uma sessão neste processo
+       * para uma restauração mais adicional. Desta forma, não há tempo a perder quando a autenticação é apenas
+       * pré-condição do teste em vez de seu foco principal.
        *
-       * The username is used as the session id, which means that if it changes, eg., when
-       * logging in with a different user, a new session is created (via GUI), and saved for
-       * further restoring.
+       * O nome de usuário é usado como o id da sessão, o que significa que se ele mudar, por exemplo, quando
+       * Fazendo login com um usuário diferente, uma nova sessão é criada (via GUI) e salva para
+       * mais restauração.
        *
-       * @param username string - The email of the user you want to log in with
-       * @param password string - The password of the user you want to log in with
+       * @param username string - O email do usuário com o qual você deseja fazer login
+       * @param password string - A senha do usuário com o qual você deseja fazer login
        *
-       * @example cy.sessionLogin() // Logs into the app (or simply restores the session) using the default email and password (defined as envs)
-       * @example cy.sessionLogin('user@email.com', 'S3cRe7P@ssW0rd') // Logs into the app (or simply restores the session) using the provided credentials
+       * @example cy.sessionLogin() // Faz logon no aplicativo (ou simplesmente restaura a sessão) usando o e-mail e a senha padrão (definidos como envs)
+       * @example cy.sessionLogin('user@email.com', 'S3cRe7P@ssW0rd') // Faz logon no aplicativo (ou simplesmente restaura a sessão) usando as credenciais fornecidas
        */
       sessionLogin(username?: string, password?: string): void | Cypress.Chainable<null>
   
       /**
-       * Creates a new note with the possibility of attaching the `example.json` fixture file.
+       * Cria uma nova nota com a possibilidade de anexar o arquivo `example.json'fixture file.
        *
-       * @param note string - The text of the note you want to create
-       * @param attachFile boolean - A boolean (`true` or `false`) defining if you want or not to attach a file when creating the note (default is `false`)
+       * @param note string - O texto da nota que você deseja criar
+       * @param attachFile boolean - Um booleano ('verdadeiro', ou 'falso') que define se você quer ou não anexar um arquivo ao criar a nota (o padrão é 'falso')
        *
-       * @example cy.createNote('Feed the cat') // Creates a note with the provided description
-       * @example cy.createNote('Learn Cypress', true) // Creates a note with the provided description, and attaches the `example.json` fixture file to it
+       * @example cy.createNote('Feed the cat') // Cria uma nota com a descrição fornecida
+       * @example cy.createNote('Learn Cypress', true) // Cria uma nota com a descrição fornecida e anexa o arquivo de dispositivo `example.json`
        */
       createNote(note: string, attachFile?: boolean): Cypress.Chainable<undefined>
   
       /**
-       * Edits an already existing note.
+       * Edita uma nota já existente.
        *
-       * @param note string - The text of the note you want to edit
-       * @param newNoteValue string - The new value for the note you want to edit
-       * @param attachFile boolean - A boolean (`true` or `false`) defining if you want or not to attach a file when editing the note (default is `false`)
+       * @param note string - O texto da nota que você deseja editar
+       * @param newNoteValue string - O novo valor para a nota que você deseja editar
+       * @param attachFile boolean - Um booleano ('verdadeiro', ou 'falso') que define se você quer ou não anexar um arquivo ao editar a nota (o padrão é 'falso')
        *
-       * @example cy.editNote('Learn Cypress', 'Learn Cypress at the TAT online school') // Edits the description of note with the text 'Learn Cypress' to 'Learn Cypress at the TAT online school'
-       * @example cy.editNote('Learn Cypress', 'Learn Cypress at the TAT online school', true) // Edits the description of note with the text 'Learn Cypress' to 'Learn Cypress at the TAT online school', and attaches the `example.json` fixture file to it
+       * @example cy.editNote('Alimentar o Gato', 'Alimentar o Gato pela manhã') // Edita a descrição da nota com o texto 'Alimentar o Gato' para 'Alimentar o Gato pela manhã'
+       * @example cy.editNote('Alimentar o Gato', 'Alimentar o Gato pela manhã', true) // Edita a descrição da nota com o texto 'Alimentar o Gato' para 'Alimentar o Gato pela manhã', e anexa o arquivo de fixação `example.json`
        */
       editNote(note: string, newNoteValue: string, attachFile?: boolean): Cypress.Chainable<undefined>
   
       /**
-       * Deletes a note.
+       * Exclui uma nota.
        *
-       * @param note string - The text of the note you want to delete
+       * @param note string - O texto da nota que você deseja excluir
        *
-       * @example cy.deleteNote('Feed the cat') // Deletes a note with the provided description
+       * @example cy.deleteNote('Alimentar o gato') // Exclui uma nota com a descrição fornecida
        */
       deleteNote(note: string): Cypress.Chainable<undefined>
   
       /**
-       * Fills in the settings form with sample data and submits it.
+       * Preenche o formulário de configuração com dados de amostra e envia-o.
        *
-       * @example cy.fillSettingsFormAndSubmit() // Visits the settings page, fills in the form with sample data, and submits it
+       * @example cy.fillSettingsFormAndSubmit() // Visita a página de configurações, preenche o formulário com dados de amostra e envia-o
        */
       fillSettingsFormAndSubmit(): Cypress.Chainable<JQuery<HTMLButtonElement>>
   
       /**
-       * Fills in the signup form and submits it with the provided credentials.
+       * Preencha o formulário de inscrição e envie-o com as credenciais fornecidas.
        *
-       * After that, enters a six digits code sent to the email used in the previous
-       * step, and submits the second form.
+       * Depois disso, insere um código de seis dígitos enviado para o e-mail utilizado no
+       * passo, e envia o segundo formulário.
        *
-       * Finally, waits for the `@getStories` request to ensure the signup succeeded.
+       * Finalmente, espera pelo pedido `@getStories` para garantir que a inscrição tenha sido bem-sucedida.
        *
-       * @param email string - The email of a still not signed up user
-       * @param password string - The password for the user being signed up
+       * @param email string - O e-mail de um usuário ainda não registrado
+       * @param password string - T senha para o usuário que está sendo registrado
        *
        * @example cy.fillSignupFormAndSubmit('some-user@example.com', 'sEcR37-p@s5w0rD')
        */
