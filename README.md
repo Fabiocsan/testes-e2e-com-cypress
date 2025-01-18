@@ -24,9 +24,12 @@ Faça uma cópia do arquivo ['cypress.env.example.json'] (./cypress.env.example.
 
 **Nota:** O arquivo `cypress.env.json` não é rastreado pelo git, pois está listado no arquivo `.gitignore' por ser dados sensiveis, afim de validar os testes, segue os valores utilizados:
 
-"USER_EMAIL": "e6d0fc1e-bf9a-4194-b7c8-54e3dcf8445f@5m91d6ru.mailosaur.net",
-"USER_PASSWORD": "s3Cre7P@sSw0rd",
-"MAILOSAUR_SERVER_ID": "5m91d6ru",
+"USER_EMAIL": "e6d0fc1e-bf9a-4194-b7c8-54e3dcf8445f@5m91d6ru.mailosaur.net"
+
+"USER_PASSWORD": "s3Cre7P@sSw0rd"
+
+"MAILOSAUR_SERVER_ID": "5m91d6ru"
+
 "MAILOSAUR_API_KEY": "KGRdAhrMP70lDk4S6QyXHkMhOdqrpCrp"
 
 
