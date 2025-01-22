@@ -51,5 +51,6 @@ Execute `npm run cy:open:tablet` para abrir o __Cypress App__ para executar test
 
 ___
 
-Feito com ❤️ por [Fabio Santos](https://github.com/Fabiocsan).
+Feito com ❤️ por [Fabio Santos](https://github.com/Fabiocsan). 😊
+
 
