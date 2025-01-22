@@ -7,7 +7,7 @@ Projeto de exemplo para demonstrar testes de ponta a ponta (e2e) escritos com [C
 Para clonar e executar este projeto, você precisará de:
 
 - [git](https://git-scm.com/downloads) (eu usei a versão `2.47.1(2)` ao escrever este documento)
-- [Node.js](https://nodejs.org/pt/) (eu usei a versão `v22.13.0~ ao escrever este documento)
+- [Node.js](https://nodejs.org/pt/) (eu usei a versão `v22.13.0` ao escrever este documento)
 - npm (eu usei a versão `11.0.0` ao escrever este documento)
 
 **Nota:** Ao instalar o Node.js, npm é instalado automaticamente. 🚀
